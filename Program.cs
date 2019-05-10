@@ -19,12 +19,9 @@ namespace PalindromeChecker
         private static void PalindromeChecker()
         {
             string input = Console.ReadLine();
-            char[] cArray = input.ToCharArray();
-            string reverse = String.Empty;
-            for (int i = cArray.Length - 1; i > -1; i--)
-            {
-                reverse += cArray[i];
-            }
+            char[] charArray = input.ToCharArray();
+            Array.Reverse(charArray);
+            string reverse = new string(charArray);
 
             if (input.ToLower() == reverse.ToLower())
             {
